@@ -1,0 +1,27 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: root
+  password: root
+  host: 127.0.0.1
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: ichurch_development
+  #host: db_painel_gestao
+  port: 5432
+
+test:
+  <<: *default
+  database: ichurch_test
+  host: 127.0.0.1
+  port: 5432
+
+
+production:
+  <<: *default
+  database: ichurch
+  username: root
+  password: k58WJ7OKcL778zdJ
