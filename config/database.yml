@@ -22,6 +22,8 @@ test:
 
 production:
   <<: *default
-  database: ichurch
-  username: root
-  password: k58WJ7OKcL778zdJ
+  host: ec2-50-19-109-120.compute-1.amazonaws.com
+  port: 5432
+  database: d8pj11q6j7hka4
+  username: byfwhwowypfnup
+  password: fc5e141ba931d5d58f6e9299760e7eeb01710e0acd53912f6f0833d0512ad56c
