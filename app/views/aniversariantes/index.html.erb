@@ -2,14 +2,14 @@
 
 <% @aniversariantes.each do |mes_ano, pessoas| %>
   <div class="card">
-    <div class="card-header">
-      <%= mes_ano %>
+    <div class="card-header text-center">
+      <b><%= mes_ano %></b>
     </div>
     <ul class="list-group list-group-flush">
       <% pessoas.each do |pessoa| %>
         <li class="list-group-item">
           <p><b><%= pessoa.nome %></b></p>
-          <p class="card-text"><small class="text-muted"><%= l(pessoa.data_nascimento, format: :long)%></small></p>
+          <p class="card-text"><small class="text-muted"><%= l(pessoa.data_nascimento, format: :short)%></small></p>
         </li>
       <% end %>
     </ul>
