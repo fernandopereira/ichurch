@@ -5,6 +5,7 @@ class Pessoa < ApplicationRecord
     aniversariantes = {}
     
     proximos_aniversariantes.each do |pessoa|
+      next if pessoa.data_nascimento.blank?
       next if Date.today.month >= pessoa.data_nascimento.month && 
               Date.today.day >= pessoa.data_nascimento.day
 
