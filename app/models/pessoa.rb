@@ -19,6 +19,6 @@ class Pessoa < ApplicationRecord
   private
 
   def self.proximos_aniversariantes
-    Pessoa.all.order('data_nascimento DESC, nome DESC')
+    Pessoa.all.order('extract(DAY from data_nascimento), extract(MONTH from data_nascimento)')
   end
 end
