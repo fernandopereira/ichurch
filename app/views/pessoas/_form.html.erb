@@ -3,7 +3,7 @@
   <% if @pessoa.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@pessoa.errors.count, "error") %> prohibited this pessoa from being saved:</h3>
+        <h3 class="panel-title">Ocorreram <%= pluralize(@pessoa.errors.count, "problema", "problemas") %>:</h3>
       </div>
       <div class="panel-body">
         <ul>
@@ -15,15 +15,7 @@
     </div>
   <% end %>
 
-
   <div class="form-row">
-  
-    <div class="form-group col-md-8">
-      <%= f.label :nome %>
-      <%= f.text_field :nome, :class => 'form-control' %>
-      <%=f.error_span(:nome) %>
-    </div>
-
     <div class="form-group col-md-4" style="margin-top: 35px;">
       <div class="form-check-inline">
         <input class="form-check-input" type="radio" name="pessoa[tipo]" id="tipo1" value="davizinho" checked>
@@ -39,14 +31,23 @@
       </div>
       <%=f.error_span(:tipo) %>
     </div>
+  </div>
 
-    <div class="form-group col-md-4">
+  <div class="form-row">
+  
+    <div class="form-group col-md-8">
+      <%= f.label :nome %>
+      <%= f.text_field :nome, :class => 'form-control' %>
+      <%=f.error_span(:nome) %>
+    </div>
+
+    <div class="form-group col-md-2">
       <%= f.label :data_nascimento %>
       <%= f.date_field :data_nascimento, :class => 'form-control' %>
       <%=f.error_span(:data_nascimento) %>
     </div>
 
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-2">
       <%= f.label :telefone %>
       <%= f.text_field :telefone, :class => 'form-control' %>
       <%=f.error_span(:telefone) %>
@@ -54,23 +55,40 @@
   </div>
 
   <div class="form-row">
-    <div class="form-group col-md-3">
+    <div class="form-group col-md-1">
       <%= f.label :cep %>
       <%= f.text_field :cep, :class => 'form-control' %>
       <%=f.error_span(:cep) %>
     </div>
 
-    <div class="form-group col-md-5">
+    <div class="form-group col-md-3">
+      <%= f.label :municipio %>
+      <%= f.text_field :municipio, :class => 'form-control' %>
+      <%=f.error_span(:municipio) %>
+    </div>
+
+    <div class="form-group col-md-4">
       <%= f.label :endereco %>
       <%= f.text_field :endereco, :class => 'form-control' %>
       <%=f.error_span(:endereco) %>
     </div>
 
+    <div class="form-group col-md-1">
+      <%= f.label :numero %>
+      <%= f.text_field :numero, :class => 'form-control' %>
+      <%=f.error_span(:numero) %>
+    </div>
 
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-2">
       <%= f.label :bairro %>
       <%= f.text_field :bairro, :class => 'form-control' %>
       <%=f.error_span(:bairro) %>
+    </div>
+
+    <div class="form-group col-md-1">
+      <%= f.label :uf %>
+      <%= f.text_field :uf, :class => 'form-control' %>
+      <%=f.error_span(:uf) %>
     </div>
   </div>
 

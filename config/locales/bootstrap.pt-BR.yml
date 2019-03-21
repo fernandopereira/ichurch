@@ -1,0 +1,16 @@
+pt-BR:
+  helpers:
+    actions: "Ações"
+    links:
+      back: "Voltar"
+      cancel: "Cancelar"
+      confirm: "Você tem certeza?"
+      account_confirm: "Você tem certeza? <br> Todos os registros da conta serão perdidos. <br> Este processo é irreversível."
+      destroy: "Excluir"
+      new: "Novo"
+      edit: "Editar"
+    titles:
+      edit: "Editar"
+      save: "Salvar"
+      new: "Novo"
+      delete: "Excluir"
