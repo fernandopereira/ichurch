@@ -22,7 +22,11 @@
         <td><%= link_to pessoa.id, pessoa_path(pessoa) %></td>
         <td><%= pessoa.nome %></td>
         <td><%= pessoa.tipo %></td>
-        <td><%= l pessoa.data_nascimento %></td>
+        <% if pessoa.data_nascimento.present? %>
+          <td><%= l pessoa.data_nascimento %></td>
+        <% else %>
+          <td><%= pessoa.data_nascimento %></td>
+        <% end %>
         <td><%= pessoa.telefone %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
